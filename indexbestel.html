@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestelformulier</title>
+    <link rel="stylesheet" href="bestel/css/style.css">
+    <script defer src="assets/js/validatie.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Bestelformulier</h2>
+        <form id="bestelformulier" novalidate>
+            <div class="form-group">
+                <label for="naam">Naam:</label>
+                <input type="text" id="naam" name="naam" placeholder="Vul je naam in" required>
+                <span class="error" id="naamError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Vul je e-mail in" required>
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="telefoon">Telefoonnummer:</label>
+                <input type="tel" id="telefoon" name="telefoon" placeholder="Vul je telefoonnummer in" pattern="^\+?\d{10,}$" required>
+                <span class="error" id="telefoonError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="adres">Adres:</label>
+                <input type="text" id="adres" name="adres" placeholder="Vul je adres in" required>
+                <span class="error" id="adresError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="auto">Gekozen auto:</label>
+                <select id="auto" name="auto" required>
+                    <option value="">Selecteer een auto</option>
+                    <option value="Audi RS5">Audi RS5</option>
+                    <option value="BMW M5">BMW M5</option>
+                    <option value="Audi RS3">Audi RS3</option>
+                    <option value="BMW 118">BMW 118</option>
+                </select>
+                <span class="error" id="autoError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="aantal">Aantal:</label>
+                <input type="number" id="aantal" name="aantal" min="1" required>
+                <span class="error" id="aantalError"></span>
+            </div>
+
+            <button type="submit" class="btn-submit">Bestelling plaatsen</button>
+        </form>
+    </div>
+
+</body>
+</html>

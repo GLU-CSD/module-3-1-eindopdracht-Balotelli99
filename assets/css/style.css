@@ -1,9 +1,7 @@
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
-
 
 .banner {
   width: 100%;
@@ -17,60 +15,51 @@ body {
   position: relative;
 }
 
-
-.sidebar {
+/* The sidebar menu */.sidebar {
   height: 100%;
   width: 0;
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.9); 
+  right: 0;
+  background-color: #29606e;
   overflow-x: hidden;
-  padding-top: 60px;
+  padding-top: 20px;
   transition: 0.5s;
 }
 
-/* Sidebar links */
 .sidebar a {
-  padding: 10px 20px;
+  padding: 10px 15px;
   text-decoration: none;
   font-size: 20px;
-  color: white;
+  color: #ffffff;
   display: block;
   transition: 0.3s;
 }
 
-.sidebar a:hover {
-  background-color: #575757;
-}
-
-/* Sluitknop */
 .sidebar .closebtn {
   position: absolute;
   top: 10px;
-  right: 20px;
+  left: 20px;
   font-size: 36px;
+  cursor: pointer;
   color: white;
 }
 
-/* Menu knop (in de banner) */
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
+  background-color: #000;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border: none;
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  right: 20px;
 }
 
-.openbtn:hover {
-  background-color: #444;
-}
 
-/* Banner tekst */
+
 .banner-content {
   color: white;
   padding: 20px;
@@ -79,36 +68,30 @@ body {
 .banner-content h1 {
   font-size: 40px;
   margin-bottom: 135px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Style the navigation bar */
 .navbar {
   width: 100%;
-  background-color: #555;
-  overflow: auto;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
-
-
 .navbar a {
-  float: center;
-  text-align: center;
-  padding: 12px;
+  padding: 32px;
   color: white;
   text-decoration: none;
   font-size: 20px;
 }
 
-
 .navbar a:hover {
   background-color: #000;
 }
 
-
 .active {
   background-color: #04AA6D;
 }
-
 
 @media screen and (max-width: 500px) {
   .navbar a {
@@ -116,3 +99,61 @@ body {
     display: block;
   }
 }
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-width: 380px;
+  background-color: #f9f9f9;
+  margin-top: 10px;
+}
+
+.product-card img {
+  width: 350px;
+  height: 240px;
+  border-radius: 5px;
+}
+
+.product-info h2 {
+  font-size: 18px;
+}
+
+.product-info h3 {
+  font-size: 16px;
+}
+
+.prijs {
+  font-size: 35px;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
