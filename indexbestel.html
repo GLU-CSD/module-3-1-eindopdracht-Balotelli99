@@ -1,5 +1,73 @@
 <!DOCTYPE html>
 <html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sultan's Car Empire</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<script>
+  function openNav() {
+    document.querySelector(".sidebar").style.width = "160px";
+  }
+  
+  function closeNav() {
+    document.querySelector(".sidebar").style.width = "0";
+  }
+  </script>
+  
+
+<body>
+
+
+
+
+  <div class="banner">
+
+  
+<div class="sidebar">
+  <a href="#">About</a>
+  <a href="#">AUDI</a>
+  <a href="#">BMW</a>
+  <a href="#">Contact</a>
+  <h3>Prijsrange:</h3>
+  <label for="priceRange">Prijs: €<span id="minPrice">20</span> - €<span id="maxPrice">100</span></label>
+  <input type="range" id="priceSlider" min="20" max="100" value="100" step="1">
+  <button class="openbtn" onclick="openNav()">☰ Menu</button>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+
+</div>
+
+
+<div class="main">
+  ...
+</div>
+    >
+    <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="navbar">
+      <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="search.html"><i class="fa fa-fw fa-search"></i> Search</a>
+      <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+      <a href="indexbestel.html"><i class="fa fa-fw fa-shopping-cart"></i> Checkout</a>
+  </div>
+  
+
+
+    <div class="banner-content">
+      <h1 img>Welkom bij Sultan's Car Empire</h1>
+    </div>
+  </div>
+<html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,33 +75,95 @@
     <link rel="stylesheet" href="bestel/css/style.css">
     <script defer src="assets/js/validatie.js"></script>
 </head>
+
 <body>
+
+</body>
+
+</html>
+
+
 
     <div class="container">
         <h2>Bestelformulier</h2>
-        <form id="bestelformulier" novalidate>
+        <form id="indexbestelformulier" novalidate>
+
             <div class="form-group">
-                <label for="naam">Naam:</label>
-                <input type="text" id="naam" name="naam" placeholder="Vul je naam in" required>
-                <span class="error" id="naamError"></span>
+                <label for="aanhef">Aanhef:</label>
+                <select id="aanhef" name="aanhef" required>
+                    <option value="">Selecteer</option>
+                    <option value="Dhr.">Dhr.</option>
+                    <option value="Mevr.">Mevr.</option>
+                    <option value="Anders">Anders</option>
+                </select>
+                <span class="error" id="aanhefError"></span>
             </div>
 
             <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Vul je e-mail in" required>
+                <label for="voornaam">Voornaam:</label>
+                <input type="text" id="voornaam" name="voornaam" required>
+                <span class="error" id="voornaamError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="tussenvoegsel">Tussenvoegsel:</label>
+                <input type="text" id="tussenvoegsel" name="tussenvoegsel">
+            </div>
+
+            <div class="form-group">
+                <label for="achternaam">Achternaam:</label>
+                <input type="text" id="achternaam" name="achternaam" required>
+                <span class="error" id="achternaamError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="straat">Straatnaam:</label>
+                <input type="text" id="straat" name="straat" required>
+                <span class="error" id="straatError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="huisnummer">Huisnummer:</label>
+                <input type="text" id="huisnummer" name="huisnummer" required>
+                <span class="error" id="huisnummerError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="postcode">Postcode:</label>
+                <input type="text" id="postcode" name="postcode" required>
+                <span class="error" id="postcodeError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="land">Land:</label>
+                <select id="land" name="land" required>
+                    <option value="">Selecteer een land</option>
+                    <option value="Nederland">Nederland</option>
+                    <option value="Albanie">Albanie</option>
+                    <option value="Brazilie">Brazilie</option>
+                    <option value="Duitsland">Duitsland</option>
+                    <option value="Italie">Italie</option>
+                    <option value="Kroatie">Kroatie</option>
+                </select>
+                <span class="error" id="landError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mailadres:</label>
+                <input type="email" id="email" name="email" required>
                 <span class="error" id="emailError"></span>
             </div>
 
             <div class="form-group">
                 <label for="telefoon">Telefoonnummer:</label>
-                <input type="tel" id="telefoon" name="telefoon" placeholder="Vul je telefoonnummer in" pattern="^\+?\d{10,}$" required>
+                <input type="tel" id="telefoon" name="telefoon" required>
                 <span class="error" id="telefoonError"></span>
             </div>
 
             <div class="form-group">
-                <label for="adres">Adres:</label>
-                <input type="text" id="adres" name="adres" placeholder="Vul je adres in" required>
-                <span class="error" id="adresError"></span>
+                <label for="geboortedatum">Geboortedatum:</label>
+                <input type="date" id="geboortedatum" name="geboortedatum" required>
+                <span class="error" id="geboortedatumError"></span>
             </div>
 
             <div class="form-group">
@@ -44,6 +174,8 @@
                     <option value="BMW M5">BMW M5</option>
                     <option value="Audi RS3">Audi RS3</option>
                     <option value="BMW 118">BMW 118</option>
+                    <option value="RS6">Audi RS6</option>
+                    <option value="TT">Audi TT</option>
                 </select>
                 <span class="error" id="autoError"></span>
             </div>
@@ -54,9 +186,36 @@
                 <span class="error" id="aantalError"></span>
             </div>
 
+            <div class="form-group">
+                <input type="checkbox" id="voorwaarden" name="voorwaarden" required>
+                <label for="voorwaarden">Ik ga akkoord met de algemene voorwaarden</label>
+                <span class="error" id="voorwaardenError"></span>
+            </div>
+
             <button type="submit" class="btn-submit">Bestelling plaatsen</button>
         </form>
     </div>
 
+      
+
+      <footer class="footer">
+        <p>&copy; 2025 Sultan's Car Empire. Alle rechten voorbehouden.</p>
+      </footer>
+      
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
 </body>
+
 </html>
