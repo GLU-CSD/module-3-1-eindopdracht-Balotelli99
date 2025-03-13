@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<html lang="nl">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sultan's Car Empire</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+  <script>
+    function openNav() {
+      document.querySelector(".sidebar").style.width = "160px";
+    }
+    
+    function closeNav() {
+      document.querySelector(".sidebar").style.width = "0";
+    }
+  </script>
 </head>
 
-
-<script>
-  function openNav() {
-    document.querySelector(".sidebar").style.width = "160px";
-  }
-  
-  function closeNav() {
-    document.querySelector(".sidebar").style.width = "0";
-  }
-  </script>
-  
 
 <body>
 
@@ -34,10 +30,9 @@
   <a href="#">BMW</a>
   <a href="#">Contact</a>
   <h3>Prijsrange:</h3>
-  <label for="priceRange">Prijs: €<span id="minPrice">20</span> - €<span id="maxPrice">100</span></label>
+  <label for="priceSlider">Prijs: €<span id="minPrice">10.000</span> - €<span id="maxPrice">250.000</span></label>
   <input type="range" id="priceSlider" min="20" max="100" value="100" step="1">
-  <button class="openbtn" onclick="openNav()">☰ Menu</button>
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  
 
 
 </div>
@@ -58,6 +53,9 @@
       <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
       <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
       <a href="indexbestel.html"><i class="fa fa-fw fa-shopping-cart"></i> Checkout</a>
+      <img src="/assets/img/Schermafbeelding 2025-03-04 141359.png" alt="Logo">
+   
+
   </div>
   
 
@@ -288,17 +286,6 @@
       
 
     </div>
-
-  </div>
-
-
-
-
-
-
-
-
-
 
 </body>
 
