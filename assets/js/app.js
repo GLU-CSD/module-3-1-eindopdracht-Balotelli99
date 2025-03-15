@@ -29,7 +29,6 @@ function updateCartCount() {
 document.addEventListener("DOMContentLoaded", function () {
   const addToCartButtons = document.querySelectorAll(".product-card button");
 
-
   addToCartButtons.forEach(button => {
     button.addEventListener("click", function () {
       cartCount++;
