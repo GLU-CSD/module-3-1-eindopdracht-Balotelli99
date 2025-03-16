@@ -15,6 +15,8 @@
     }
   </script>
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css">
 
 <body>
 
@@ -23,6 +25,10 @@
     <a href="#">Audi
     <a href="#">Bmw
     <a href="#">Over ons
+      <div class="price-filter">
+        <label>Prijs: €<span id="minPrice">20.000</span> - €<span id="maxPrice">250.000</span></label>
+        <div id="priceSlider"></div>
+      </div>
   </div>
   
 
@@ -277,6 +283,22 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      const priceSlider = document.getElementById("priceSlider");
+      const minPrice = document.getElementById("minPrice");
+      const maxPrice = document.getElementById("maxPrice");
+
+      noUiSlider.create(priceSlider, {
+        start: [20000, 250000],
+        connect: true,
+        range: { 'min': 20000, 'max': 250000 },
+        step: 1000
+      });
+
+      priceSlider.noUiSlider.on('update', function (values) {
+        minPrice.textContent = parseInt(values[0]).toLocaleString();
+        maxPrice.textContent = parseInt(values[1]).toLocaleString();
+      });
+
       let cartCount = 0;
       const cartCountElement = document.getElementById("cart-count");
       const addToCartButtons = document.querySelectorAll(".add-to-cart");
