@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sultan's Car Empire</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css">
+
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js"></script>
   <script>
     function openNav() {
       document.querySelector(".sidebar").style.width = "160px";
@@ -15,23 +21,24 @@
     }
   </script>
 </head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css">
 
 <body>
 
+  <!-- Sidebar -->
   <div class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a href="#">Audi
-    <a href="#">Bmw
-    <a href="#">Over ons
-      <div class="price-filter">
-        <label>Prijs: €<span id="minPrice">20.000</span> - €<span id="maxPrice">250.000</span></label>
-        <div id="priceSlider"></div>
-      </div>
-  </div>
-  
+    <a href="#">Audi</a>
+    <a href="#">BMW</a>
+    <a href="#">Over ons</a>
 
+    <!-- Prijslider -->
+    <div class="price-filter">
+      <label>Prijs: €<span id="minPrice">20.000</span> - €<span id="maxPrice">250.000</span></label>
+      <div id="priceSlider"></div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
   <div class="navbar">
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ Menu</span>
     <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
@@ -275,14 +282,15 @@
     </div>
     
 
-    
-
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Sultan's Car Empire. Alle rechten voorbehouden.</p>
   </footer>
 
+  <!-- JavaScript voor prijslider en winkelwagen -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      // Prijslider configureren
       const priceSlider = document.getElementById("priceSlider");
       const minPrice = document.getElementById("minPrice");
       const maxPrice = document.getElementById("maxPrice");
@@ -299,6 +307,7 @@
         maxPrice.textContent = parseInt(values[1]).toLocaleString();
       });
 
+      // Winkelwagen functionaliteit
       let cartCount = 0;
       const cartCountElement = document.getElementById("cart-count");
       const addToCartButtons = document.querySelectorAll(".add-to-cart");
