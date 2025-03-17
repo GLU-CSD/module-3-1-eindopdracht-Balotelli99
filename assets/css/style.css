@@ -20,7 +20,7 @@ body {
 }
 
 .navbar span:hover {
-  color: #ddd; /* Optioneel: een lichtere kleur bij hover */
+  color: #ddd; 
 }
 
 
@@ -132,7 +132,7 @@ body {
   width: 100%;
 }
 
-/* Media query voor kleinere schermen */
+
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -145,7 +145,7 @@ body {
   }
 }
 
-/* Media query voor mobiele schermen */
+
 @media screen and (max-width: 480px) {
   .navbar a {
     padding: 10px;
@@ -170,7 +170,7 @@ body {
   }
 }
 
-/* Prijsschuif stijl - strak en minimalistisch */
+/* Prijsschuif stijl */
 .price-filter {
   position: absolute;
   bottom: 390px;
@@ -180,15 +180,10 @@ body {
   text-align: center;
   color: white;
 }
-
 #priceSlider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 3px;
-  background: #aaa;
-  border-radius: 5px;
-  outline: none;
-  transition: background 0.3s;
+  -webkit-appearance: none; 
+  -moz-appearance: none;     
+  appearance: none;          
 }
 
 #priceSlider::-webkit-slider-thumb {

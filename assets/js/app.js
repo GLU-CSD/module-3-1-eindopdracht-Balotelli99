@@ -1,38 +1,49 @@
-const priceSlider = document.getElementById("priceSlider");
-const minPrice = document.getElementById("minPrice");
-const maxPrice = document.getElementById("maxPrice");
-
-// Initialiseer noUiSlider
-noUiSlider.create(priceSlider, {
-  start: [20000, 250000],
-  connect: true,
-  range: {
-    'min': 20000,
-    'max': 250000
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  initializePriceSlider();
+  setupCartFunctionality();
 });
 
-// Update de prijsweergave bij wijziging van de slider
-priceSlider.noUiSlider.on('update', function (values) {
-  minPrice.textContent = values[0];
-  maxPrice.textContent = values[1];
-});
+/**
+ * update de prijsweergave.
+ */
+function initializePriceSlider() {
+  const priceSlider = document.getElementById("priceSlider");
+  const minPrice = document.getElementById("minPrice");
+  const maxPrice = document.getElementById("maxPrice");
 
-// Winkelwagen teller
-let cartCount = 0;
+  if (!priceSlider) return;
 
-function updateCartCount() {
-  document.getElementById("cart-count").textContent = cartCount;
+  noUiSlider.create(priceSlider, {
+    start: [20000, 250000],
+    connect: true,
+    range: { min: 20000, max: 250000 },
+    step: 1000,
+  });
+
+  priceSlider.noUiSlider.on("update", (values) => {
+    minPrice.textContent = parseInt(values[0]).toLocaleString();
+    maxPrice.textContent = parseInt(values[1]).toLocaleString();
+  });
 }
 
-// Zorg dat alles pas werkt als de pagina geladen is
-document.addEventListener("DOMContentLoaded", function () {
+/**
+ * Beheer de winkelwagen-functionaliteit.
+ */
+function setupCartFunctionality() {
+  let cartCount = 0;
+  const cartCountElement = document.getElementById("cart-count");
   const addToCartButtons = document.querySelectorAll(".product-card button");
 
-  addToCartButtons.forEach(button => {
-    button.addEventListener("click", function () {
+  if (!cartCountElement) return;
+
+  const updateCartCount = () => {
+    cartCountElement.textContent = cartCount;
+  };
+
+  addToCartButtons.forEach((button) => {
+    button.addEventListener("click", () => {
       cartCount++;
       updateCartCount();
     });
   });
-});
+}
