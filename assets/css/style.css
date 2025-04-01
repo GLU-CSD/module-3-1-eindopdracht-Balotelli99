@@ -3,7 +3,7 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  max-width: 100%;
+  max-width: 900%;
 }
 
 /* Navigatie */
@@ -85,28 +85,28 @@ body {
 }
 
 /* Flexbox voor de container */
+
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  max-width: 1200px; /* Zorg ervoor dat er genoeg ruimte is voor 3 producten */
+
 }
 
 /* Product kaarten styling */
 .product-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex: 1 1 calc(33.33% - 40px); /* Zorgt voor 3 producten per rij */
+  max-width: 350px; /* Optioneel, om te voorkomen dat ze te groot worden */
+  background-color: #f9f9f9;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  max-width: 380px;
-  background-color: #f9f9f9;
-  margin-top: 10px;
   box-sizing: border-box;
+  text-align: center;
 }
-
 .product-card img {
   width: 100%;
   height: auto;
@@ -202,6 +202,78 @@ body {
   background: #888;
 }
 
+
+
+/*bestelformulier */
+.container {
+  width: 80%;
+  max-width: 900px;
+  background: white;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #218838;
+}
+
+
+
+.footer {
+  background-color: #333;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
 /* Algemene footer styling */
 .footer {
   background-color: #333;
@@ -251,9 +323,11 @@ body {
 
 /* Footer onderkant */
 .footer-bottom {
-  background-color: #3a1d1d;
+  background-color: #6f2e2e;
   padding: 10px;
   margin-top: 20px;
   font-size: 14px;
 }
+
+
 
