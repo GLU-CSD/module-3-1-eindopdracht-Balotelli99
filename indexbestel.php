@@ -10,14 +10,15 @@
 
 <body>
 
-  <div class="navbar">
-    <a href="#"><i class="fa fa-home"></i> Home</a>
-    <a href="#"><i class="fa fa-search"></i> Search</a>
-    <a href="#"><i class="fa fa-envelope"></i> Contact</a>
-    <a href="#"><i class="fa fa-user"></i> Login</a>
+  <div class="bestelnavbar">
+    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+    <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+    <img src="/assets/img/logo.png" alt="Logo">
   </div>
 
-  <div class="container">
+  <div class="bestelcontainer">
     <h2>Bestelformulier</h2>
     <form id="bestelformulier">
 
@@ -94,5 +95,47 @@
     </form>
   </div>
 
+<!-- Footer -->
+<footer class="betselfooter"><!-- Aangepaste Footer -->
+  <footer class="bestelfooter">
+    <div class="bestelfooter-container">
+      
+      <div class="bestelfooter-section">
+        <h3>VEILIG BETALEN</h3>
+        <p>Betaal in alle veiligheid met onze partners</p>
+        <div class="bestelpayment-methods">
+          <img src="mastercard.png" alt="Mastercard">
+          <img src="visa.png" alt="Visa">
+          <img src="paypal.png" alt="PayPal">
+        </div>
+      </div>
+  
+      <div class="bestelfooter-section">
+        <h3>LEVERINGSKOSTEN</h3>
+        <p>Transport tarieven</p>
+      </div>
+  
+      <div class="bestelfooter-section">
+        <h3>KLANTENSERVICE</h3>
+        <p>- Wachtwoord vergeten</p>
+        <p>- Veilig Betaling</p>
+        <p>- Levering</p>
+        <p>- Annuleren, retourneren en ruilen</p>
+      </div>
+  
+      <div class="bestelfooter-section">
+        <h3>OVER ONS</h3>
+        <p>- Over ons</p>
+        <p>- Contactformulier</p>
+        <p>- Algemene voorwaarden</p>
+        <p>- Privacy beleid</p>
+      </div>
+    </div>
+  
+    <!-- Sub-footer voor copyright -->
+    <div class="bestelfooter-copyright">
+      <p>&copy; 2025 Sultan's Car Empire. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
 </body>
 </html>

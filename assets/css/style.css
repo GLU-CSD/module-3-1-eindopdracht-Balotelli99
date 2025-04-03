@@ -3,7 +3,7 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  max-width: 900%;
+  max-width: 1900%;
 }
 
 /* Navigatie */
@@ -42,7 +42,7 @@ body {
 }
 
 .navbar img {
-  width: 90px;
+  width: 30px;
 }
 
 .navbar a:hover {
@@ -92,7 +92,7 @@ body {
   justify-content: center;
   gap: 20px;
   padding: 20px;
-  max-width: 1200px; /* Zorg ervoor dat er genoeg ruimte is voor 3 producten */
+  max-width: 1900px;
 
 }
 
@@ -202,17 +202,108 @@ body {
   background: #888;
 }
 
+.footer {
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+  min-width: 250px;
+  text-align: left;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.payment-methods img {
+  width: 85px;
+  height: auto;
+}
+
+
+
+
 
 
 /*bestelformulier */
-.container {
-  width: 80%;
+.bestelcontainer {
+  width: 1200%;
   max-width: 900px;
   background: white;
   margin: 50px auto;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bestelnavbar {
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 21px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.bestelnavbar span {
+  color: white;
+}
+
+.bestelnavbar span:hover {
+  color: #ddd; 
+}
+
+
+.bestelnavbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.bestelnavbar .active {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.bestelnavbar img {
+  width: 58px;
+}
+
+.besstelnavbar a:hover {
+  background-color: #565656;
 }
 
 h2 {
@@ -267,23 +358,16 @@ input, select {
 }
 
 
-
-.footer {
-  background-color: #333;
-  padding: 10px;
-  font-family: Arial, sans-serif;
-}
-
 /* Algemene footer styling */
-.footer {
+.bestelfooter {
   background-color: #333;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 20px 0;
   font-family: Arial, sans-serif;
   text-align: center;
 }
 
-.footer-container {
+.bestelfooter-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -292,41 +376,33 @@ input, select {
   padding: 10px;
 }
 
-.footer-section {
+.bestelfooter-section {
   flex: 1;
   padding: 10px;
   min-width: 250px;
   text-align: left;
 }
 
-.footer-section h3 {
+.bestelfooter-section h3 {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.footer-section p {
+.bestelfooter-section p {
   font-size: 14px;
   margin: 5px 0;
 }
 
-.payment-methods {
+.bestelpayment-methods {
   display: flex;
   gap: 10px;
   margin-top: 10px;
 }
 
-.payment-methods img {
+.bestelpayment-methods img {
   width: 85px;
   height: auto;
-}
-
-/* Footer onderkant */
-.footer-bottom {
-  background-color: #6f2e2e;
-  padding: 10px;
-  margin-top: 20px;
-  font-size: 14px;
 }
 
 

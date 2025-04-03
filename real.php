@@ -225,7 +225,7 @@
     <div class="product-card">
       <h2>BMW M5</h2>
       <h3>50.000km stand</h3>
-      <h4>Touring xDrive Competition | Facelift, Goodwood Grhijbk,vvhjcckcyftui</h4>
+      <h4>Touring xDrive Competition | Facelift, Goodwood Facelift, Goodwood Green,8L</h4>
       <img src="image_copy_.png" alt="BMW M5">
       <div class="prijs">€162.500</div>
       <button class="add-to-cart">Add to cart</button>
